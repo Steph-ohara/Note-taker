@@ -15,20 +15,17 @@ app.get('/api/notes', (req, res) => {
     res.json(allNotes.slice(1));
 });
 
-module.exports = function(app) {
-    
-    app.get('/notes', function(req, res) {
-      res.sendFile(path.join(__dirname, '../public/notes.html'));
-    });
-  
-    app.get('/', function(req, res) {
-      res.sendFile(path.join(__dirname, '../public/index.html'));
-    });
-  
-    app.get('*', function(req, res) {
-      res.sendFile(path.join(__dirname, '../public/index.html'));
-    });
-  };
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
+});
+
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
+});
 
 function createNewNote(body, notesArray) {
     const newNote = body;
@@ -70,34 +67,10 @@ function deleteNote(id, notesArray) {
     }
 }
 
-app.delete('/api/notes/:id', function(req, res) {
-      
-    const deleteNote = req.params.id;
-    console.log(deleteNote);
-
-    fs.readFile('./db/db.json', (err, data) => {
-      if (err) throw err;
-
-      
-      dbData = JSON.parse(data);
-      
-      for (let i = 0; i < dbData.length; i++) {
-        if (dbData[i].id === Number(deleteNote)) {
-          dbData.splice([i], 1);
-        }
-      }
-      console.log(dbData);
-      stringData = JSON.stringify(dbData);
-
-      fs.writeFile('./db/db.json', stringData, (err, data) => {
-        if (err) throw err;
-      });
-    });
-
-          
-    res.status(204).send();
+app.delete('/api/notes/:id', (req, res) => {
+    deleteNote(req.params.id, allNotes);
+    res.json(true);
 });
-};
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
