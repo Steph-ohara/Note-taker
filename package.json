@@ -6,19 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2",
-    "inquirer": "^8.2.0"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11.git"
+    "url": "git+https://github.com/steph-ohara/Note-Taker.git"
   },
   "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11/issues"
+    "url": "https://github.com/steph-ohara/Note-Taker/issues"
   },
-  "homepage": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11#readme"
+  "homepage": "https://github.com/steph-ohara/Note-Taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "shortid": "^2.2.16"
+  }
 }
