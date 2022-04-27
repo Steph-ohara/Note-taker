@@ -1,24 +1,24 @@
 {
-    "name": "note-taker",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.17.2",
-      "inquirer": "^8.2.0"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11.git"
-    },
-    "keywords": [],
-    "bugs": {
-      "url": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11/issues"
-    },
-    "homepage": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11#readme"
-  }
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "inquirer": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11/issues"
+  },
+  "homepage": "https://github.com/jkgdev8/Note-Taker-UCLA-Challenge-11#readme"
+}

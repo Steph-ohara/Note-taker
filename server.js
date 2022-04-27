@@ -10,8 +10,8 @@ app.use(express.static('public'));
 
 
 
-require('./Develop/routes/api')(app);
-require('./Develop/routes/html')(app);
+require('./routing/apiroute')(app);
+require('./routing/htmlroute')(app);
 
 
 app.listen(PORT, function() {
